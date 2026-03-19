@@ -1,0 +1,18 @@
+info:
+  name: probar ruta protegida
+  type: http
+  seq: 4
+
+http:
+  method: GET
+  url: http://localhost:5000/api/auth/profile
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YmFiOGY4OTlkNjdiYmYzYmJjYmVmZiIsImlhdCI6MTc3MzkzMTU1NywiZXhwIjoxNzc0MDE3OTU3fQ.xJ9iu01vbNlHrBFQlq1mtAUAG8AsClh9G8CFULG2jng
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
