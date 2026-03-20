@@ -15,8 +15,12 @@ app.get("/", (req, res) => {
   res.json({ message: "API funcionando" });
 });
 
+
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
+
+const trainingRoutes = require('./routes/trainingRoutes');
+app.use('/api/trainings', trainingRoutes);
 
 
 const PORT = process.env.PORT || 5000;

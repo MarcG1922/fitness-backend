@@ -1,0 +1,18 @@
+info:
+  name: ver entrenamientos
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: http://localhost:5000/api/trainings
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YmFiOGY4OTlkNjdiYmYzYmJjYmVmZiIsImlhdCI6MTc3NDAzOTc5NiwiZXhwIjoxNzc0MTI2MTk2fQ.XdwSD1fAP0n_G4c21PvRIiHsCM9_1pGxBPvyuwSSJ-M
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

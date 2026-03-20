@@ -1,0 +1,39 @@
+info:
+  name: crear entrenamiento
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://localhost:5000/api/trainings
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YmFiOGY4OTlkNjdiYmYzYmJjYmVmZiIsImlhdCI6MTc3NDAzOTc5NiwiZXhwIjoxNzc0MTI2MTk2fQ.XdwSD1fAP0n_G4c21PvRIiHsCM9_1pGxBPvyuwSSJ-M
+  body:
+    type: json
+    data: |-
+      {
+        "type": "Push",
+        "exercises": [
+          {
+            "name": "Press banca",
+            "sets": 4,
+            "reps": 8,
+            "weight": 80
+          },
+          {
+            "name": "Press militar",
+            "sets": 3,
+            "reps": 10,
+            "weight": 40
+          }
+        ],
+        "notes": "Buen entrenamiento"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
