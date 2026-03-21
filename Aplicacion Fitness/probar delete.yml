@@ -1,0 +1,18 @@
+info:
+  name: probar delete
+  type: http
+  seq: 9
+
+http:
+  method: DELETE
+  url: http://localhost:5000/api/trainings/69bdb30a321817ddeb70bf31
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YmFiOGY4OTlkNjdiYmYzYmJjYmVmZiIsImlhdCI6MTc3NDAzOTc5NiwiZXhwIjoxNzc0MTI2MTk2fQ.XdwSD1fAP0n_G4c21PvRIiHsCM9_1pGxBPvyuwSSJ-M
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
