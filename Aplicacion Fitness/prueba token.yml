@@ -1,29 +1,14 @@
 info:
-  name: crear entrenamiento
+  name: prueba token
   type: http
-  seq: 5
+  seq: 12
 
 http:
-  method: POST
+  method: GET
   url: http://localhost:5000/api/trainings
   headers:
     - name: Authorization
       value: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YzE0YmNkYzFjNmIxZWQ5MWZmMTQ4OCIsImlhdCI6MTc3NDI3NTk0OCwiZXhwIjoxNzc0MzYyMzQ4fQ.8SjDH2MY5m_-BtHEg7oSi7fm4i_mWDw10FUuegX9uW4
-  body:
-    type: json
-    data: |-
-      {
-        "type": "Pull",
-        "exercises": [
-          {
-            "name": "Dominadas",
-            "sets": 4,
-            "reps": 8,
-            "weight": 0
-          }
-        ],
-        "notes": "Entreno espalda"
-      }
   auth: inherit
 
 settings:
