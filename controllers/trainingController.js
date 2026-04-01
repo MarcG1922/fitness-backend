@@ -6,7 +6,8 @@ const createTraining = async (req, res) => {
       user: req.user._id,
       type: req.body.type,
       exercises: req.body.exercises,
-      notes: req.body.notes
+      notes: req.body.notes,
+      date: req.body.date ? new Date(req.body.date) : new Date()
     });
 
     res.status(201).json(training);
