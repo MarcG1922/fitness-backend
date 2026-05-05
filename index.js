@@ -12,7 +12,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://fitnessfrontend-omega.vercel.app",
-    "https://fitnessfrontend-3x14mtwwp-marcg1922s-projects.vercel.app"
+    "https://fitnessfrontend-m7kz4hf9h-marcg1922s-projects.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
