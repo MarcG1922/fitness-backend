@@ -8,19 +8,11 @@ connectDB();
 
 const app = express();
 
-const corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "https://fitnessfrontend-omega.vercel.app",
-    "https://fitnessfrontend-m7kz4hf9h-marcg1922s-projects.vercel.app"
-  ],
+app.use(cors({
+  origin: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-};
-
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use(express.json());
 
