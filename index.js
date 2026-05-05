@@ -9,14 +9,14 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: true,
+  origin: true, // permite Vercel dinámico
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
+app.options("*", cors());
 
 app.use(express.json());
-
 
 const authRoutes = require("./routes/authRoutes");
 const trainingRoutes = require("./routes/trainingRoutes");
@@ -26,11 +26,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/trainings", trainingRoutes);
 app.use("/api/weights", weightRoutes);
 
-
 app.get("/", (req, res) => {
   res.json({ message: "API funcionando" });
 });
-
 
 const PORT = process.env.PORT || 5000;
 
