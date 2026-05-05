@@ -9,9 +9,14 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "https://fitnessfrontend-omega.vercel.app",
+  origin: [
+    "http://localhost:5173",
+    "https://fitnessfrontend-omega.vercel.app",
+    "https://fitnessfrontend-3x14mtwwp-marcg1922s-projects.vercel.app"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
 }));
 
 
