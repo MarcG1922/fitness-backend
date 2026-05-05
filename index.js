@@ -9,13 +9,11 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: true, // 🔥 clave para evitar problemas en Vercel dinámico
+  origin: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-
-app.options("*", cors());
 
 app.use(express.json());
 
